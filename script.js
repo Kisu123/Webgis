@@ -2,7 +2,7 @@
 var waterBodyLayer = new ol.layer.Tile({
     source: new ol.source.TileWMS({
         url: 'http://192.168.43.9:8080/geoserver/Dhalgaon/wms',
-        params: { "LAYERS": 'Dhalgaon:water_body', 'TILED': true },
+        params: { "LAYERS": 'dhalgaon:water_body', 'TILED': true },
         serverType: 'geoserver'
     }),
     visible: true
@@ -11,7 +11,7 @@ var waterBodyLayer = new ol.layer.Tile({
 var cadastralLayer = new ol.layer.Tile({
     source: new ol.source.TileWMS({
         url: 'http://192.168.43.9:8080/geoserver/Dhalgaon/wms',
-        params: { "LAYERS": 'Dhalgaon:cadastral', 'TILED': true },
+        params: { "LAYERS": 'dhalgaon:cadastral', 'TILED': true },
         serverType: 'geoserver'
     }),
     visible: true
@@ -20,7 +20,7 @@ var cadastralLayer = new ol.layer.Tile({
 var villageBoundaryLayer = new ol.layer.Tile({
     source: new ol.source.TileWMS({
         url: 'http://192.168.43.9:8080/geoserver/Dhalgaon/wms',
-        params: { "LAYERS": 'Dhalgaon:village_boundary', 'TILED': true },
+        params: { "LAYERS": 'dhalgaon:village_boundary', 'TILED': true },
         serverType: 'geoserver'
     }),
     visible: true

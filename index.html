@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenLayers Map with Switchers</title>
+
+  <!-- OpenLayers CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.4.0/dist/ol.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- North Arrow -->
+  <div id="north-arrow">
+    <img src="images/north-arrow.png" id="northArrowImg" alt="North Arrow">
+  </div>
+
+  <!-- Basemap Switcher -->
+  <div class="basemap-selector">
+    <div class="basemap-option" data-map="OSM" title="OpenStreetMap">
+      <img src="images/osm.JPG" alt="OSM">
+    </div>
+    <div class="basemap-option" data-map="ESRIHybrid" title="ESRI Hybrid">
+      <img src="images/hybrid.JPG" alt="ESRI Hybrid">
+    </div>
+  </div>
+
+  
+
+  <!-- Layer Switcher -->
+  <div class="layer-switcher">
+    <label><input type="checkbox" data-layer="waterbody" checked> Water Body</label>
+    <label><input type="checkbox" data-layer="cadastre" checked> Cadastre</label>
+    <label><input type="checkbox" data-layer="vb" checked> Village Boundary</label>
+  </div>
+
+  <button id="printBtn">Print</button>
+
+  <!-- File Upload -->
+  <div class="upload-container">
+    <input type="file" id="fileInput" accept=".zip, .kml, .kmz" />
+  </div>
+
+  <!-- OpenLayers JS -->
+  <script src="https://unpkg.com/shpjs@latest/dist/shp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.4.0/dist/ol.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
